@@ -5,8 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+system("clear")
 Item.destroy_all
-20.times
-	Item.create(title: Faker::Creature::Cat.name, description: Faker::Creature::Cat.breed, price: Faker::Commerce.price(range = 0..1000.0, as_string = false)
- , image_url:Faker::Avatar.image("my-own-slug", "50x50", "jpg") 
+20.times do
+	Item.create(title: Faker::Creature::Cat.name, description: Faker::Creature::Cat.breed, 
+		price: Faker::Commerce.price(range: 0..1000.0, as_string: false), image_url: Faker::Avatar.image(slug:"my-own-slug", size:"50x50", format:"jpg")) 
 end
