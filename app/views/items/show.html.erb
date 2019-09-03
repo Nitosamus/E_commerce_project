@@ -1,7 +1,21 @@
 <h1>The product description of:</h1>
-<ol>
-	<li><%=@items.title %></li>
-	<li><%=@items.description %></li>
-	<li><%=@items.price %></li>
-	<li><%=@items.image_url%></li>
+
 </ol>
+<table>
+	<p>
+	<tr>
+		<td>
+			<h2><%= @item.title %></h2>
+			<div>
+				<%= image_tag @item.image_url, class: "rounded-circle" %>
+			</div>
+		</td>
+		<td>
+			<p><strong>Description: </strong><%=@item.description%></p>
+			<h4>Price: <%= @item.price %> $</h4>
+			<hr>
+		</td>			
+	</tr>
+	</p>
+</table>
+<%=link_to "<button type= 'button' class= 'btn btn-secondary' >Passer commande</button>".html_safe%>

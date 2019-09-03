@@ -2,12 +2,10 @@
 	<p>
 		<%@items.each do |image|%>
 	<tr>
-			<h2><%= image.title %></h2>
+			<h2><%= image.title %> <%=link_to "View >>", item_path(image.id), role: "button", class: "btn btn-outline-info "%></h2>
 			<div>
 				<%= image_tag image.image_url, class: "rounded-circle" %>
 			</div>
-			<p><strong>Description: </strong><%=image.description%></p>
-			<h4>Price: <%= image.price %> $</h4>
 			<hr>
 	</tr>
 	<% end %>
