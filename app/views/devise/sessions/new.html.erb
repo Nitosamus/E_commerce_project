@@ -1,4 +1,22 @@
+
 <div style="text-align: center; ">
+<head>
+ 
+<style>
+  div.border{
+    text-align: center;
+    border: 1px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 400px;
+  margin-left: 400px;
+  background-color: lightblue;
+  border-radius: 8px;
+  }
+</style>
+</head>
+<div class="border">
+
 <h2 style="color: blue" >Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -28,6 +46,8 @@
 
 
 </div>
+
 <footer style="background: gray; font-size: 50%">
   
 </footer>
+
