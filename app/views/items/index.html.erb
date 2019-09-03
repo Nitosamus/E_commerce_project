@@ -2,9 +2,13 @@
 	<p>
 		<%@items.each do |image|%>
 	<tr>
-		<td><%= image.title %></td>
-		<td><%= image.image_url %></td>
-		<td><%= image.price %></td>
+			<h2><%= image.title %></h2>
+			<div>
+				<%= image_tag image.image_url, class: "rounded-circle" %>
+			</div>
+			<p><strong>Description: </strong><%=image.description%></p>
+			<h4>Price: <%= image.price %> $</h4>
+			<hr>
 	</tr>
 	<% end %>
 	</p>
