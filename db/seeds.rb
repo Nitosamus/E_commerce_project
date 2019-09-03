@@ -9,6 +9,11 @@ system("clear")
 Item.destroy_all
 
 20.times do
+	Item.create(title: Faker::Creature::Cat.name, description: Faker::Creature::Cat.breed, 
+		price: Faker::Commerce.price(range: 0..1000.0, as_string: false), image_url: Faker::Avatar.image(slug:"my-own-slug", size:"50x50", format:"jpg")) 
+end
+
+20.times do
 	cat_collection = ["https://static.wamiz.fr/images/articles/facebook/article/chaton-fb-593eb3ebd3c5d.jpg",
 				 "http://ekladata.com/eWuH-26qwD_9OX9sTHCAh57yDgg.jpg", 
 				 "https://as2.ftcdn.net/jpg/00/03/42/83/500_F_3428387_tjpmWlVk0xLEF8E7jyDayD6hwBZSLE.jpg",
@@ -27,3 +32,4 @@ Item.destroy_all
 		price: Faker::Commerce.price(range: 0..1000.0, as_string: false), image_url: cat_collection[rand(0..9)]) 
 end
 tp Item.all
+
