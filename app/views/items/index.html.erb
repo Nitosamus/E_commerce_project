@@ -1,16 +1,24 @@
 <table>
 	<p>
 		<%@items.each do |image|%>
-	<tr>
-			<h2><%= image.title %> <%=link_to "View >>", item_path(image.id), role: "button", class: "btn btn-outline-info "%></h2>
-			<div>
-				<%= image_tag image.image_url, class: "rounded-circle" %>
+<tr>
+	<td>
+			<h2 style="text-align:center;"><%= image.title %></h2>
+			<div style="text-align:center;">
+				<%= image_tag image.image_url, class: "rounded-circle" %>  <%=link_to "View >>", item_path(image.id), role: "button", class: "btn btn-outline-info "%>
+			
 			</div>
+			<% end %>
+	
 			<hr>
+
+</td>
+	
 	</tr>
-	<% end %>
 	</p>
 </table>
-<%=link_to "login", new_user_session_path%>
+<button class="btn"><%=link_to "login", new_user_session_path%></button>
+
+
 
 

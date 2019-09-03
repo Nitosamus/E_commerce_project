@@ -317,3 +317,12 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+.rounded-circle{
+  height: 25rem;
+  width: 25rem;
+
+}
+button{
+   background-color: #64a19d !important;
+   
+}
