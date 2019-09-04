@@ -291,6 +291,8 @@
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
+  background: linear-gradient(-100deg, rgb(0, 135, 177), rgb(120, 120, 120) ,rgb(120, 120, 120), rgb(185, 204, 206));
+  position: relative;
 }
 
 a {
