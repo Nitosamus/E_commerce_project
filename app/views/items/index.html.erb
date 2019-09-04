@@ -1,22 +1,23 @@
-<table>
-	<p>
-		<%@items.each do |image|%>
-<tr>
-	<td>
-			<h2 style="text-align:center;"><%= image.title %></h2>
-			<div style="text-align:center;">
-				<%=link_to item_path(image.id) do%>
-				<%= image_tag image.image_url, class: "rounded-circle" %>
-				<%end%>
-				 <%=link_to "View >>", item_path(image.id), role: "button", class: "btn btn-outline-info "%>
-				
-			</div>
-			<% end %>
-	
-			<hr>
 
-</td>
-	
-	</tr>
-	</p>
-</table>
+
+<div class="container">
+	<%@items.each do |image|%>
+	<div class="box">
+		<div class="imgBox">
+				<%=link_to item_path(image.id) do%>
+				<%=image_tag image.image_url%>
+				<%end%>
+		</div>
+			<div class="details">
+				<div class="containt">
+					<%=link_to item_path(image.id) do%>
+				<h2><%= image.title %><h2>
+						<%end%>
+				</div>
+			</div>
+			
+
+	</div>
+
+			<% end %>
+</div>
