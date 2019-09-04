@@ -5,8 +5,11 @@
 	<td>
 			<h2 style="text-align:center;"><%= image.title %></h2>
 			<div style="text-align:center;">
-				<%= image_tag image.image_url, class: "rounded-circle" %>  <%=link_to "View >>", item_path(image.id), role: "button", class: "btn btn-outline-info "%>
-			
+				<%=link_to item_path(image.id) do%>
+				<%= image_tag image.image_url, class: "rounded-circle" %>
+				<%end%>
+				 <%=link_to "View >>", item_path(image.id), role: "button", class: "btn btn-outline-info "%>
+				
 			</div>
 			<% end %>
 	
@@ -17,7 +20,3 @@
 	</tr>
 	</p>
 </table>
-
-
-
-

@@ -1,0 +1,8 @@
+<div class="card-deck">
+  <div class="card">
+  <%= image_tag image.image_url, class: "rounded-circle card-img-top" %>  <%=link_to "View >>", item_path(image.id), role: "button", class: "btn btn-outline-info "%>
+    <div class="card-body">
+      <h2 class="card-title" style="text-align:center;"><%= image.title %></h2>
+    </div>
+  </div>
+</div>
