@@ -1,6 +1,11 @@
 <nav class="navbar navbar-dark bg-dark">
   <form class="form-inline">
       <%= link_to "Item-Home", root_path, class: "btn btn-outline-success navbar-brand", role: "button"%>
+
+  </form>
+
+  <% if user_signed_in?%>
+  
   </form>
 
   <% if user_signed_in?%>
@@ -20,7 +25,11 @@
 <%else%>
 
 <div class="btn-group">
-  <button type="button" class="btn btn-info">Actio</button>
+
+  <button type="button" class="btn btn-info">Action</button>
+
+  <button type="button" class="btn btn-info">Action</button>
+
   <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>
