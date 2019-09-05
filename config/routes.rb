@@ -9,5 +9,4 @@ end
 resources :charges
 resources :users
 resources :orders
-
 end

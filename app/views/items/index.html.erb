@@ -7,15 +7,11 @@
 				<%=link_to item_path(image.id) do%>
 				<%=image_tag image.image_url%>
 				<%end%>
-
-				 <%=link_to "View >>", item_path(image.id), role: "button", class: "btn btn-outline-info "%>
 				 <%if current_user && current_user.cart%>
 				 <%=link_to "Add To cart", item_carts_path(image.id), role: "button", class: "btn btn-info", method: :post%>
 				 <%elsif current_user%>
 				 <%=link_to "Add To/Creat cart", item_carts_path(image.id), role: "button", class: "btn btn-info", method: :post%>
 				 <%end%>	
-
-
 		</div>
 			<div class="details">
 				<div class="containt">

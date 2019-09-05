@@ -18,8 +18,6 @@ class CartsController < ApplicationController
       flash[:alert] =  "#{current_user.email}, vous avez ajouté  #{item.title} dans votre panier
       et Vous avez atteint le nombre de cart"
       redirect_to item_cart_path(params[:item_id], @cart.id)
-    else
-      puts @cart
     end
 
   end
@@ -44,6 +42,4 @@ def check_cart_number_for_user
 
     end
 end
-
-
 end
