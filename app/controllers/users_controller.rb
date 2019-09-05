@@ -19,4 +19,8 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
+  def product_params
+    params.require(:product).permit(:image [])
+  end
 end
