@@ -2,8 +2,18 @@
   <form class="form-inline">
       <%= link_to "Item-Home", root_path, class: "btn btn-outline-success navbar-brand", role: "button"%>
 
+      <%= link_to "Cart", root_path, class: "btn btn-outline-secondary btn-sm navbar-brand", role: "button"%>
+
+
   </form>
+<<<<<<< HEAD
   
+=======
+
+  <% if user_signed_in?%>
+
+  </form>
+>>>>>>> f370cd62b0c09921e18fb7c22c8c94ff50060b3e
 
   <% if user_signed_in?%>
 
@@ -16,10 +26,8 @@
      <%=link_to "Mon profil", user_path(current_user.id), class:"dropdown-item"%>
     <%=link_to "Se deconnecter", destroy_user_session_path, method: :delete, class:"dropdown-item"%>
     <div class="dropdown-divider"></div>
-
   </div>
 </div>
-
 <%else%>
 
 <div class="btn-group">

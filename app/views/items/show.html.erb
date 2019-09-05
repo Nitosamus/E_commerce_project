@@ -18,3 +18,8 @@
 	</p>
 </table>
 <%=link_to "<button type= 'button' class= 'btn btn-secondary' >Passer commande</button>".html_safe%>
+				<%if current_user && current_user.cart%>
+				 <%=link_to "Add To cart", item_carts_path(params[:id]), role: "button", class: "btn btn-info", method: :post%>
+				 <%elsif current_user%>
+				 <%=link_to "Add To/Create cart", item_carts_path(params[:id]), role: "button", class: "btn btn-info", method: :post%>
+				 <%end%>
