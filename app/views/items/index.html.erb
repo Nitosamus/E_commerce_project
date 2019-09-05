@@ -99,6 +99,7 @@ body {
 				 <%=link_to "Add To/Creat cart", item_carts_path(image.id), role: "button", method: :post%>
 				 <%end%>
 		</div>
+
 		<div class="details">
 			<div class="containt" style="color: white">
 				<h2>
@@ -107,6 +108,15 @@ body {
 				</h2>
 			</div>
 		</div>
+
+			<div class="details">
+				<div class="containt">
+					<%=link_to item_path(image.id) do%>
+				<h2><%= image.title %><h2>
+						<%end%>
+				</div>
+			</div>
+
 	</div>
 			<% end %>
 </div>
