@@ -1,3 +1,5 @@
+<div class=showcat>
+
 <h1>The product description of:</h1>
 
 <table>
@@ -18,7 +20,6 @@
 	</p>
 </table>
 
-
 				<%if current_user && current_user.cart%>
 				 <%=link_to "Add To cart", item_carts_path(params[:id]), role: "button", class: "btn btn-info", method: :post%>
 				 <a href="<%=new_item_cart_charge_path(params[:id], current_user.cart.id)%>" type="button" class="btn btn-secondary">Passer commande</a>
@@ -29,4 +30,4 @@
 
 
 
-
+</div>
