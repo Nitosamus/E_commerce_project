@@ -1,29 +1,123 @@
+<style>
+body {
+   
+  background: rgb(120, 120, 120);
+  font-family: sans-serif;
+}
+.container {
+  margin-top: -20px;
+  width: 1280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 20px;
+}
+.container .box .imgBox {
+	width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 20px;
+}
+.container .box .imgBox img {
+  width: 300px;
+  height: 300px;
+  transition: transform 2s;
+  border-radius: 20px;
+}
+.container .box:hover .imgBox img{
+  transform: scale(1.2);
+}
+.container .box .details {
+  width: 260px;
+  height: 230px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 100px;
+  transform: scaleY(0);
+  transition: transform .5s;
+}
+.container .box:hover .details {
+  transform: scaleY(1);
+}
+.container .box .details .content {
+  position: absolute;
+  top: 50%;
+  color: white;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 15px;
 
+}
+.container .box .details .content h2 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+  text-shadow: 0 0 3px blue, 0 0 5px green;
+}
 
+.botton {
+  color: white;
+  padding: 1.25rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  border-radius:10px;
+  text-align: center;
+  width: 250px;
+  background: DodgerBlue;
+  height: 0px;
+  margin-right: 100px;
+  margin-bottom: 150px;
+  margin-left: 20px;
+  margin-top: -1px;
+}
+</style>
+<body>
 <div class="container">
 	<%@items.each do |image|%>
 	<div class="box">
 		<div class="imgBox">
-				<%=link_to item_path(image.id) do%>
-				<%=image_tag image.image_url%>
-				<%end%>
-				 <%if current_user && current_user.cart%>
-				 <%=link_to "Add To cart", item_carts_path(image.id), role: "button", class: "btn btn-info", method: :post%>
-				 <%elsif current_user%>
-				 <%=link_to "Add To/Creat cart", item_carts_path(image.id), role: "button", class: "btn btn-info", method: :post%>
-				 <%end%>	
+		<h3><%=link_to item_path(image.id) do%>
+		<%=image_tag image.image_url%>
+		<%end%></h3>
 		</div>
+		<div class= "botton" style="color: white">
+				<%if current_user && current_user.cart%>
+				 <%=link_to "Add To cart", item_carts_path(image.id), role: "button",method: :post%>
+				 <%elsif current_user%>
+				 <%=link_to "Add To/Creat cart", item_carts_path(image.id), role: "button", method: :post%>
+				 <%end%>
+		</div>
+
+		<div class="details">
+			<div class="containt" style="color: white">
+				<h2>
+					<%=link_to item_path(image.id) do%><%= image.title %>
+					<%end%>
+				</h2>
+			</div>
+		</div>
+
 			<div class="details">
 				<div class="containt">
 					<%=link_to item_path(image.id) do%>
 				<h2><%= image.title %><h2>
 						<%end%>
 				</div>
-
 			</div>
-			
 
 	</div>
-
 			<% end %>
 </div>
+</body>
