@@ -17,7 +17,7 @@ class CartsController < ApplicationController
       current_user.cart.items << Item.find(params[:item_id])
       flash[:alert] =  "#{current_user.email}, vous avez ajouté  #{item.title} dans votre panier
       et Vous avez atteint le nombre de cart"
-      redirect_to item_cart_path(params[:item_id], @cart.id)
+      redirect_to item_cart_path(params[:item_id], current_user.cart.id)
     end
 
   end
