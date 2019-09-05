@@ -44,6 +44,4 @@ def check_cart_number_for_user
 
     end
 end
-
-
 end
