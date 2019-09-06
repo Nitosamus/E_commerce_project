@@ -1,30 +1,33 @@
-<table>
-	<p>
-		<%@items.each do |image|%>
-<tr>
-	<td>
-			<h2 style="text-align:center;"><%= image.title %></h2>
-			<div style="text-align:center;">
+
+
+<div class="container">
+	<%@items.each do |image|%>
+	<div class="box">
+		<div class="imgBox">
 				<%=link_to item_path(image.id) do%>
-				<%= image_tag image.image_url, class: "rounded-circle" %>
+				<%=image_tag image.image_url%>
 				<%end%>
+
 				 <%=link_to "View >>", item_path(image.id), role: "button", class: "btn btn-outline-info "%>
-				
+				 <%if current_user && current_user.cart%>
+				 <%=link_to "Add To cart", item_carts_path(image.id), role: "button", class: "btn btn-info", method: :post%>
+				 <%elsif current_user%>
+				 <%=link_to "Add To/Creat cart", item_carts_path(image.id), role: "button", class: "btn btn-info", method: :post%>
+				 <%end%>	
+
+
+		</div>
+			<div class="details">
+				<div class="containt">
+					<%=link_to item_path(image.id) do%>
+				<h2><%= image.title %><h2>
+						<%end%>
+				</div>
+
 			</div>
+			
+
+	</div>
+
 			<% end %>
-	
-			<hr>
-
-</td>
-	
-	</tr>
-	</p>
-</table>
-<<<<<<< HEAD
-=======
-
->>>>>>> 73a0285d7f3b080fd06ac2c52b7ecac3c953eed6
-
-
-
-
+</div>
