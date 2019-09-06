@@ -39,11 +39,9 @@ ActiveRecord::Schema.define(version: 2019_09_06_055437) do
   create_table "carts", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "item_id"
-    t.bigint "order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_carts_on_item_id"
-    t.index ["order_id"], name: "index_carts_on_order_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
@@ -58,10 +56,8 @@ ActiveRecord::Schema.define(version: 2019_09_06_055437) do
     t.text "description"
     t.decimal "price"
     t.string "image_url"
-    t.bigint "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cart_id"], name: "index_items_on_cart_id"
   end
 
   create_table "orders", force: :cascade do |t|
