@@ -1,30 +1,27 @@
   
-
-<h2>Modifier photo de profil</h2>
-	<% if  @user.image.attached? %>
-	<%= image_tag @user.image %>
-	<% else%>
-	<p> vous n'avez pas encore un photo </p>
-	<% end%>
-
-  <%= form_tag user_images_path(@user.id), multipart: true do%>
-<%= file_field_tag :image %>
-<%= submit_tag "Upload image"%>
-<%end%>
-
 <h2>Modifier votre identité</h2>
-  <form action="/users/<%=@user.id%>" method="put">
-	Nom: <br>
-	<input type="text" name="last_name"> <br>
-	Prénom: <br>
-	 <input type="text" name="first_name"> <br>
-	Age: <br>
-	<input type="number" name="age"><br>
-	Ville: <br>
-	<input type="text" name="city"> <br>
-	<input type="submit" value="Submit">
-	</form> 
-
+	<%=form_for @user do |f|%>
+	<div>
+		<label>Nom</label>
+		<%=f.text_field :last_name%>
+	</div>
+	<div>
+		<label>Prénom</label>
+		<%=f.text_field :first_name%>
+	</div>
+	<div>
+		<label>Age</label>
+		<%=f.number_field :age%>
+	</div>
+	<div>
+		<label>Ville</label>
+		<%=f.text_field :city%>
+	</div>
+	<div>
+		<label>Enregister</label>
+		<%=f.submit%>
+	</div>
+<%end%>
 
 
 
