@@ -8,7 +8,7 @@
 system("clear")
 Item.destroy_all
 
-20.times do
+309.times do
 	cat_collection = ["https://static.wamiz.fr/images/articles/facebook/article/chaton-fb-593eb3ebd3c5d.jpg",
 				 "http://ekladata.com/eWuH-26qwD_9OX9sTHCAh57yDgg.jpg", 
 				 "https://as2.ftcdn.net/jpg/00/03/42/83/500_F_3428387_tjpmWlVk0xLEF8E7jyDayD6hwBZSLE.jpg",
