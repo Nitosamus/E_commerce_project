@@ -3,12 +3,13 @@
       <%= link_to "Item-Home", root_path, class: "btn btn-outline-success navbar-brand", role: "button"%>
 
       <%= link_to "Cart", root_path, class: "btn btn-outline-secondary btn-sm navbar-brand", role: "button"%>
-
-
   </form>
 
   <% if user_signed_in?%>
 
+  </form>
+
+  <% if user_signed_in?%>
   <div class="btn-group">
   <button type="button" class="btn btn-info">Autre</button>
   <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,7 +33,7 @@
     <%=link_to "S'inscrire", new_user_registration_path, class:"dropdown-item"%>
     <%=link_to "Se connecter", new_user_session_path, class:"dropdown-item"%>
     <div class="dropdown-divider"></div>
-
+</div>
 <%end%>
 
 </nav>

@@ -13,3 +13,12 @@ end
 resources :orders
 
 end
+root to: "items#index"
+	resources :items, only: [:show, :index] do
+		resources :carts, only: [:create, :show] do
+				resources :charges, only: [:new, :create, :index]
+		end
+	end
+resources :orders, only: [:create, :show, :index]
+resources :users
+end

@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+
   def index
   end
 
@@ -11,12 +12,8 @@ class OrdersController < ApplicationController
   def create
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+ private
+  def find_item
+    Item.find(params[:item_id])
   end
 end
