@@ -30,54 +30,9 @@
 <!-- for show-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
-
   </head>
-
   <body>   
     <%=render "layouts/navbar"%>
-
-  <body>
-  
-  <body>
-  
-
-   <nav class="navbar navbar-dark bg-dark">
-  <form class="form-inline">
-      <%= link_to "Item-Home", root_path, class: "btn btn-outline-success navbar-brand", role: "button"%>
-
-  </form>
-
-  <% if user_signed_in?%>
-  
-  <div class="btn-group">
-  <button type="button" class="btn btn-info">Autre</button>
-  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-     <%=link_to "Mon profil", user_path(current_user.id), class:"dropdown-item"%>
-    <%=link_to "Se deconnecter", destroy_user_session_path, method: :delete, class:"dropdown-item"%>
-    <div class="dropdown-divider"></div>
-
-  </div>
-</div>
-
-<%else%>
-
-<div class="btn-group">
-  <button type="button" class="btn btn-info">Action</button>
-  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-    <%=link_to "S'inscrire", new_user_registration_path, class:"dropdown-item"%>
-    <%=link_to "Se connecter", new_user_session_path, class:"dropdown-item"%>
-    <div class="dropdown-divider"></div>
-
-<%end%>
-
-</nav>
-    
     <%=render "layouts/flash"%>
 
     <%if current_user%>
