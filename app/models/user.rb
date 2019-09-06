@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_one_attached :image
 	 after_create :welcome_send
 	   has_one :cart
 	   has_many :orders
@@ -7,8 +8,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-
-
+  
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end

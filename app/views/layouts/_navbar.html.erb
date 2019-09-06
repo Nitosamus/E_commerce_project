@@ -13,6 +13,21 @@
     <a href="#">facebook</a>
     <a href="#">twitter</a>
     <a href="#">youtube</a>
+
+  <% if user_signed_in?%>
+
+  </form>
+
+  <% if user_signed_in?%>
+  <div class="btn-group">
+  <button type="button" class="btn btn-info">Autre</button>
+  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+     <%=link_to "Mon profil", user_path(current_user.id), class:"dropdown-item"%>
+    <%=link_to "Se deconnecter", destroy_user_session_path, method: :delete, class:"dropdown-item"%>
+    <div class="dropdown-divider"></div>
   </div>
 </li>
   </ul>
@@ -39,6 +54,16 @@
       <%=link_to "Se connecter", new_user_session_path, class:"dropdown-item"%>
       <div class="dropdown-divider"></div>
   </div>
+
+  <button type="button" class="btn btn-info">Action</button>
+
+
+  
+  <div class="dropdown-menu">
+    <%=link_to "S'inscrire", new_user_registration_path, class:"dropdown-item"%>
+    <%=link_to "Se connecter", new_user_session_path, class:"dropdown-item"%>
+    <div class="dropdown-divider"></div>
+>>>>>>> 89782dd7b107953fa98fc4ae7d7472240ccf8ce9
 </div>
 <%end%>
 
