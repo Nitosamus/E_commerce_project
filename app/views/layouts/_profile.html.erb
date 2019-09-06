@@ -1,14 +1,41 @@
 
 	<div class="container">
+
+   <h1>E-profil</h1> <br> <br>
+   <% if  @user.image.attached? %>
+<%= image_tag @user.image %>
+<% else%> 
+<p><br><br> <b>vous n'avez pas encore un photo de profil</b> </p>
+
    <h1>E-profil</h1>
    <% if  @user.image.attached? %>
 <%= image_tag @user.image %>
 <% else%>
 <p> vous n'avez pas encore un photo de profil </p>
-<% end%>
 
+<% end%>
+<br>
 <%= form_tag user_images_path(@user.id), multipart: true do%>
 <%= file_field_tag :image %>
 <%= submit_tag "Upload image"%>
+
+<%end%>	<div>
+<a href="/users/edit">Modifier email</a> <br>
+<a href=" /users/<%=@user.id%>/edit">Modifier profil</a>
+  
+</div>
+		<div>
+			<h3> A propos de moi </h3>
+			<div class="content_user">
+				<br><b> Mon prénom : </b> <%= @user.last_name%>
+				<br><b>	Mon nom de famille: </b> <%= @user.first_name%>
+				<br><b>Mon age actuel: </b><%= @user.age%>
+			 	<br><b>Ville actuelle: </b>	<%= @user.city%>
+			 </div>
+		</div>
+		</div>
+		
+
 <%end%>
   </div>
+

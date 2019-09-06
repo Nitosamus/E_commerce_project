@@ -244,3 +244,36 @@ footer {
   padding: 25px;
   font-size: 15px;
 } 
+<<<<<<< HEAD
+
+/* show user */
+ .content_user {
+  font-size: 25px;
+  font-family: serif;
+  text-align: justify;
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-right: 0px;
+  background-color: rgb(152, 221, 255);
+}
+
+/*edit user*/
+.dit{
+  border: 5px outset grey;
+  border-radius: 25px;
+  margin-left: 500px;
+   margin-top: 50px; 
+  width: 250px;
+  height: 250px;
+}
+ 
+ .edi{
+  background-color:rgb(152, 221, 255);
+  font-size: 25px;
+  text-align: center;
+  
+ }
+
+ .input{
+  width: 500px;
+ }

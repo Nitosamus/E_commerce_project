@@ -1,27 +1,62 @@
+
+
+<h2>Modifier votre identité</h2>
+<% if  @user.image.attached? %>
+<span>
+<%= image_tag @user.image , class: 'dit' %>
+</span>
+<% else%>
+<p> Il n'y a pas photo de profil </p>
+<% end%>
+
   
 <h2>Modifier votre identité</h2>
 	<%=form_for @user do |f|%>
 	<div>
 		<label>Nom</label>
-		<%=f.text_field :last_name%>
+		<%f.text_field :last_name%>
 	</div>
 	<div>
 		<label>Prénom</label>
-		<%=f.text_field :first_name%>
+		<%f.text_field :first_name%>
 	</div>
 	<div>
 		<label>Age</label>
-		<%=f.number_field :age%>
+		<%f.number_field :age%>
 	</div>
 	<div>
 		<label>Ville</label>
-		<%=f.text_field :city%>
+		<%f.text_field :city%>
 	</div>
 	<div>
 		<label>Enregister</label>
-		<%=f.submit%>
+		<%f.submit%>
 	</div>
 <%end%>
 
+
+<div class='edi'>
+	<%=form_for @user , url: user_path(@user.id) do |f|%>
+	<div>
+		<label>Nom :</label>
+		<%=f.text_field :last_name , class: "input"%>
+	</div>
+	<div>
+		<label>Prénom :</label>
+		<%=f.text_field :first_name, class: "input"%>
+	</div>
+	<div>
+		<label>Age :</label>
+		<%=f.number_field :age, class: "input"%>
+	</div>
+	<div>
+		<label>Ville :</label>
+		<%=f.text_field :city, class: "input"%>
+	</div>
+	<div>
+		<%=f.submit%>
+	</div>
+<%end%>
+</div>
 
 
