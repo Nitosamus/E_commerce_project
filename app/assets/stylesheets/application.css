@@ -339,7 +339,7 @@ button{
 */
 #navtheme{
   background-image: url("chat-mignon.jpg");
-  opacity: 1.2
+  opacity: 1.2;
 }
 
 
@@ -350,6 +350,6 @@ body {
 #checkuser{ 
   background-position: center;
   width: 400px;
-  margin-left: 600px
+  margin-left: 600px;
   position: fixed;
 }
