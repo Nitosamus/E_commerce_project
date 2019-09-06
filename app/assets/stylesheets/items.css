@@ -62,7 +62,7 @@
   text-shadow: 0 0 3px blue, 0 0 5px green;
 }
 
-.botton: link {
+.botton:link {
   font-color: red;
   padding: 1.25rem 2rem;
   text-transform: uppercase;
