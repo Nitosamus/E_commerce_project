@@ -9,6 +9,9 @@ class ItemsController < ApplicationController
     @cart = Cart.find_by(user_id: current_user.id)
 
   end
+  def update
+    
+  end
 
   private
   def find_item

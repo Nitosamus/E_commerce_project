@@ -291,7 +291,7 @@
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
-  background: linear-gradient(-100deg, rgb(0, 135, 177), rgb(120, 120, 120) ,rgb(120, 120, 120), rgb(185, 204, 206));
+  /*background: linear-gradient(-100deg, rgb(0, 135, 177), rgb(120, 120, 120) ,rgb(120, 120, 120), rgb(185, 204, 206));*/
   background-size: cover;
   position: relative;
 }
@@ -337,3 +337,19 @@ button{
   font-family: sans-serif;
 }
 */
+#navtheme{
+  background-image: url("chat-mignon.jpg");
+  opacity: 1.2
+}
+
+
+body {
+  background-color: white;
+}
+
+#checkuser{ 
+  background-position: center;
+  width: 400px;
+  margin-left: 600px
+  position: fixed;
+}

@@ -7,4 +7,8 @@ module ApplicationHelper
 			when "alert" then "alert-warning"
 		end
 	end
+	def find_out_item
+		Item.where(user_id: current_user.id)
+
+	end
 end
