@@ -1,2 +1,28 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+	Nom: <br>
+	<input type="text" name="last_name"> <br>
+	Prénom: <br>
+	 <input type="text" name="first_name"> <br>
+	Age: <br>
+	<input type="text" name="age"><br>
+	Ville: <br>
+	<input type="text" name="city"> <br>
+	<input type="submit" value="Submit">
+	</form> 
+	
+
+<div>
+	<form action="/activestorage.js" > 
+		<img class="pdp" src="upload/image.png" width="200" height="200" />
+		<input type="file" name="attachments" value="photo de profil" action="upload"> <br>
+		
+<input type="file" name="image" value="photo de profil"> <br>
+ <input name="Submit" type="submit" value="Upload image">
+<br>
+
+<div>
+  <%= form.label :image %>
+  <%= form.file_field :image %>
+</div>
+
+</div>

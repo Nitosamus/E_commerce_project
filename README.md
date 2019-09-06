@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+ANDRIAMANDRAVANISAROTRA Mandresy , @Mandresy4, @Mandresy
+RAZAFIMANAMPY Antonie Samuel, @Nitosamus, @RAZAFIMANAMPY samuel Antonie
+ANDRIANANTENAINA Jean Stephano, @groupe6.thp, @stephano
+RAHARINIAINA Victor Mamy, @RMamy02, @RAHARINIAINA Mamy
+RAKOTONIAINA Ihantakolointsoa Tamby Vetsonandrandraina, @Tamby02, @RAKOTONIAINA Tamby
+ANDRIANAMBININTSOA Gabriel Ange, @Andrygaby, @Gabriel Ange
+
+https://groupe6.herokuapp.com

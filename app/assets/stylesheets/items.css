@@ -1,0 +1,78 @@
+
+.container {
+  margin-top: -20px;
+  width: 1280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 20px;
+}
+.container .box .imgBox {
+	width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 20px;
+}
+.container .box .imgBox img {
+  width: 300px;
+  height: 300px;
+  transition: transform 2s;
+  border-radius: 20px;
+}
+.container .box:hover .imgBox img{
+  transform: scale(1.2);
+}
+.container .box .details {
+  width: 260px;
+  height: 230px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 100px;
+  transform: scaleY(0);
+  transition: transform .5s;
+}
+.container .box:hover .details {
+  transform: scaleY(1);
+}
+.container .box .details .content {
+  position: absolute;
+  top: 50%;
+  color: white;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 15px;
+
+}
+.container .box .details .content h2 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+  text-shadow: 0 0 3px blue, 0 0 5px green;
+}
+
+.botton:link {
+  font-color: red;
+  padding: 1.25rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  border-radius:10px;
+  text-align: center;
+  width: 250px;
+  height: 0px;
+  margin-right: 100px;
+  margin-bottom: 150px;
+  margin-left: 20px;
+  margin-top: -1px;
+}

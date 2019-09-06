@@ -1,14 +1,16 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
 	def index
 		@items = Item.all
 	end
-  def index
-    @items = Item.all
-  end
-  
   def show
-  	@item = find_item
 
+  	@item = find_item
+    @cart = Cart.find_by(user_id: current_user.id)
+
+  end
+  def update
+    
   end
 
   private

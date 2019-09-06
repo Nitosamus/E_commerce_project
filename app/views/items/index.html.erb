@@ -1,29 +1,37 @@
 
-
 <div class="container">
 	<%@items.each do |image|%>
 	<div class="box">
 		<div class="imgBox">
-				<%=link_to item_path(image.id) do%>
-				<%=image_tag image.image_url%>
-				<%end%>
-				 <%if current_user && current_user.cart%>
-				 <%=link_to "Add To cart", item_carts_path(image.id), role: "button", class: "btn btn-info", method: :post%>
-				 <%elsif current_user%>
-				 <%=link_to "Add To/Creat cart", item_carts_path(image.id), role: "button", class: "btn btn-info", method: :post%>
-				 <%end%>	
+		<h3><%=link_to item_path(image.id) do%>
+		<%=image_tag image.image_url%>
+		<%end%></h3>
 		</div>
+		<div class= "botton" style="color: white">
+				<%if current_user && current_user.cart%>
+				 <%=link_to "Add To cart", item_carts_path(image.id),  class: "btn-primary btn-sm", role: "button", method: :post%>
+				 <%elsif current_user%>
+				 <%=link_to "Add To/Creat cart", item_carts_path(image.id), class: "btn-primary btn-sm", role: "button", method: :post%>
+				 <%end%>
+		</div>
+
+		<div class="details">
+			<div class="containt" style="color: white">
+				<h2>
+					<%=link_to item_path(image.id) do%><%= image.title %>
+					<%end%>
+				</h2>
+			</div>
+		</div>
+
 			<div class="details">
 				<div class="containt">
 					<%=link_to item_path(image.id) do%>
 				<h2><%= image.title %><h2>
 						<%end%>
 				</div>
-
 			</div>
-			
 
 	</div>
-
 			<% end %>
 </div>

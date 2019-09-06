@@ -291,7 +291,8 @@
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
-  background: linear-gradient(-100deg, rgb(0, 135, 177), rgb(120, 120, 120) ,rgb(120, 120, 120), rgb(185, 204, 206));
+  /*background: linear-gradient(-100deg, rgb(0, 135, 177), rgb(120, 120, 120) ,rgb(120, 120, 120), rgb(185, 204, 206));*/
+  background-size: cover;
   position: relative;
 }
 
@@ -316,9 +317,7 @@ a:focus, a:hover {
   color: #64a19d !important;
 }
 
-footer {
-  padding: 5rem 0;
-}
+
 .rounded-circle{
   height: auto;
   width: auto;
@@ -329,58 +328,40 @@ button{
    
 }
 
-.container {
-  width: 1280px;
-  margin: 70px auto 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  object-fit: cover;
-}
-.container .box {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 5px;
-  box-sizing: border-box;
-  display: inline-block;
-  object-fit: cover;
-}
-.container .box .imgBox {
-  position: relative;
-  
-}
-.container .box .imgBox img {
-  max-width: 100%;
- 
-}
-.container .box:hover .imgBox img{
-  transform: scale(1.2);
-}
-
-.container .box .details {
-  position: absolute;
-  transform: scaleY(0);
-  transition: transform .5s;
-}
-.container .box:hover .details {
-  transform: scaleY(1);
-}
-.container .box .details .content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  padding: 15px;
-  color: #fff;
-}
-.container .box .details .content h2 {
+/*body {
   margin: 0;
   padding: 0;
-  font-size: 20px;
-  color: #ff0;
+  background: #262626;
+  font-family: sans-serif;
 }
-.container .box .details .content p {
-  margin: 10px 0 0;
-  padding: 0;
+*/
+#navtheme{
+  background-image: url("chat-mignon.jpg");
+  opacity: 1.2;
 }
+
+
+body {
+  background-color: white;
+}
+
+#checkuser{ 
+  background-position: center;
+  width: 400px;
+  margin-left: 600px;
+  position: fixed;
+}
+
+
+/*footer*/
+/* ******** */
+footer {
+  background-color: #3c3c3c;
+  font-size: 10px;
+  color: white;
+  bottom: 0px;
+  position: absolute;
+  opacity: 0.5;
+  text-align: center;
+  margin-bottom: -12px;
+} 

@@ -1,7 +1,23 @@
 <h1>Carts of <%=current_user.email%></h1>
 <hr>
 <div>
-	<p>There are your order(s):<br>
-		<%=current_user.cart%></p>
+	<p>There are your items(s):<br></p>
+<%@cart.each do |item|%>
+<div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">	
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><%=item.title%> qui coûte:$<%=item.price%></a>
+    </div> <br>
+  </div>
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+    	
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><%=item.description%></div>
+      <a href="<%=new_item_cart_charge_path(item.id, current_user.cart.id)%>" type="button" class="btn-secondary btn-sm">Passer commande</a>
+      <%=link_to "Rendre ce produit", item_cart_path(item.id, current_user.cart.id), role: "button", class: "btn-secondary btn-sm", method: :put %>
+    </div>
+  </div>
+</div>
+  <%end%>
 </div>
 

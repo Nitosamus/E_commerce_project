@@ -4,6 +4,7 @@ class CartsController < ApplicationController
   end
 
   def show
+    @cart = current_user.cart.items
   end
 
   def new
@@ -26,6 +27,9 @@ class CartsController < ApplicationController
   end
 
   def update
+    cart = current_user.cart.items
+    cart.delete(Item.find(params[:item_id]))
+    redirect_back fallback_location: '/', allow_other_host: false
   end
 
   def destroy
