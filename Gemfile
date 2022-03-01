@@ -72,4 +72,4 @@ gem "jquery-rails"
 gem "bcrypt"
 gem "dotenv-rails"
 gem "mailjet"
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
